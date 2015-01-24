@@ -14,7 +14,7 @@ class PointInsideCircleOutsideRectangle
         double y = double.Parse(Console.ReadLine());
 
         bool inCircleOutRectangle = ((x - 1) * (x - 1) + (y - 1) * (y - 1)) <= 1.5 * 1.5
-                                    && ((x < -1 || x > 5) && (y < -1 || y > 1));
+                                    && !((x > -1 && x < 5) && (y > -1 && y < 1));
 
         Console.WriteLine("Inside K & outside of R ---> " + inCircleOutRectangle);
     }
